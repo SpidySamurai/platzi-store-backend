@@ -10,7 +10,7 @@ git:
 script:
   - yarn test
 notifications:
-  slack: personalproje-blo4767:TDqItHEFgujDhXGgHEqT96aT
+  slack: $SLACKTOKEN
   email:
     recipients:
       - javierchiortiz@gmail.com
@@ -20,7 +20,7 @@ deploy:
   provide: heroku
   skip-cleanup: true
   keep-history: true
-  api_key: 027098b8-2e4b-4f4c-8179-a0475b6dcb64
+  api_key: $APIKEY
   app: platzi-spidy-backend
   on:
     repo: SpidySamurai/platzi-store-backend
