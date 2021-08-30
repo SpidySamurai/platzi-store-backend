@@ -1,0 +1,26 @@
+language: node_js
+cache:
+  directories:
+    - node_modules
+    - ~/.npm
+node_js:
+  - "12"
+git:
+  depth: 3
+script:
+  - yarn test
+notifications:
+  slack: personalproje-blo4767:TDqItHEFgujDhXGgHEqT96aT
+  email:
+    recipients:
+      - javierchiortiz@gmail.com
+    on_success: always
+    on_failure: always
+deploy:
+  provide: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: 027098b8-2e4b-4f4c-8179-a0475b6dcb64
+  app: platzi-spidy-backend
+  on:
+    repo: SpidySamurai/platzi-store-backend
