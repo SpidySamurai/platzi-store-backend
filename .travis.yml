@@ -10,7 +10,7 @@ git:
 script:
   - yarn test
 notifications:
-  slack: $SLACKTOKEN
+  slack: personalproje-blo4767:TDqItHEFgujDhXGgHEqT96aT
   email:
     recipients:
       - javierchiortiz@gmail.com
